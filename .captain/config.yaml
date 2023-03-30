@@ -1,0 +1,5 @@
+test-suites:
+  captain-examples-karma:
+    command: npm test
+    results:
+      path: tmp/results.json
