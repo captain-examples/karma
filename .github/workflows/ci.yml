@@ -16,11 +16,6 @@ jobs:
       - run: npm clean-install
       - uses: rwx-research/setup-captain@v1
       - uses: browser-actions/setup-chrome@v1
-      - run: |
-          captain run \
-            --suite-id captain-examples-karma \
-            --test-results "tmp/results.json" \
-            -- \
-            npm test
+      - run: captain run captain-examples-karma
         env:
           RWX_ACCESS_TOKEN: ${{ secrets.RWX_ACCESS_TOKEN }}
